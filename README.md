@@ -87,9 +87,8 @@
 
 | 뷰 | 이미지 |
 | --- | --- |
-| 온보딩 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/9fadcbc4-6152-45f1-9120-5283fd2fd58a" width="188" height="408"> |
-| 캐릭터 선택 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/5fd49b96-f4d6-44d4-8a42-a5a355a8d0f1" width="188" height="408"> |
-| 프로깅 시작 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/8d122995-d0da-456e-b142-3e801d2e3b92" width="188" height="408"> |
+| 온보딩, 캐릭터 선택 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/9fadcbc4-6152-45f1-9120-5283fd2fd58a" width="188" height="408"> |
+| 프로깅 시작, 미션 뽑기 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/8d122995-d0da-456e-b142-3e801d2e3b92" width="188" height="408"> |
 | 캐릭터와 사진찍기 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/92cf21b3-41ea-4a90-8bde-5e76985de3df" width="188" height="408"> |
 | 사진 선택 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/8bb35e4a-5704-4aa2-acfe-be9b0441b21f" width="188" height="408"> |
 | 결과 뷰 | <img src="https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/b6a20312-35a3-45d4-a0b0-5be98afe3545" width="188" height="408"> |
