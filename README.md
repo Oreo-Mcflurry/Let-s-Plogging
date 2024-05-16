@@ -1,7 +1,7 @@
 
 ![plog](https://github.com/Oreo-Mcflurry/Let-s-Plogging/assets/96654328/8e83931c-a94a-44ad-bbc4-3db291e2afa4)
 
-[미출시] 같이줍깅 | 23.07.09 ~ 23.08.03 (1달)
+## [미출시] 같이줍깅 | 23.07.09 ~ 23.08.03 (1달)
 
 <aside>
 ⭐ 플로깅을 즐거운 경험으로 만들어주자!
