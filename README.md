@@ -14,33 +14,31 @@
 
 ### 🧑‍🤝‍🧑 팀, 프로젝트 구성
 
-- 1인 개발
-- iOS 16.0+
+- iOS 4명, 디자인 2명
+- iOS 16.2+
+- watchOS 9.4+
 
 ### 🥕 기능
 
-- 로그인 / 회원가입
-- 개발자 행사 정보 받아오기
-- 같이 할 팀원 구하기
-- 참가 신청
-- 결제 기능
+- 캐릭터, 닉네임 설정
+
 
 ### 🔨 기술 스택 및 사용한 라이브러리
 
-- UIKit / SnapKit
 - SwiftUI
-- MVVM
-- RxSwift
-- Input / Output Pattern
-- Moya
-- Skeleton UI
-- RxDataSource
-- Iamport-iOS
+- MapKit
+- GameKit
+- ARKit
+- CoreData
+- CoreML
+- CreateML
+- CoreMotion
 
 ### 👏 해당 기술을 사용하며 이룬 성과
 
 ### 🌠 Trouble Shooting
 
+#### 1. 캐릭터와 함께 사진을 찍을수 있는 기능에서, 사진의 point와 view의 point위치가 달라 사진을 찍으면 
 
 ### 🗂️ 폴더 구조
 ~~~
