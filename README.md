@@ -36,9 +36,100 @@
 
 ### 👏 해당 기술을 사용하며 이룬 성과
 
+#### 1. 디자이너의 디자인 시스템을 코드로 올려 재사용성을 높임
+
+~~~swift
+struct ButtonView: View {
+    let text: String
+    @Binding var isdisable: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button {
+            action()
+        } label: {
+            ButtonLabel(text: text, isdisable: $isdisable)
+        }
+        .disabled(isdisable)
+    }
+}
+
+struct NavigationLinkView<Destination: View>: View {
+    let text: String
+    @Binding var isdisable: Bool
+    let destination: Destination
+
+    var body: some View {
+        NavigationLink {
+            destination
+        } label: {
+            ButtonLabel(text: text, isdisable: $isdisable)
+        }
+        .disabled(isdisable)
+		.navigationBarBackButtonHidden()
+    }
+}
+~~~
+
+~~~swift
+extension Font {
+    enum Jamsil: String {
+        case thin = "TheJamsilOTF1Thin"
+        case light = "TheJamsilOTF2Light"
+        case regular = "TheJamsilOTF3Regular"
+        case medium = "TheJamsilOTF4Medium"
+        case bold = "TheJamsilOTF5Bold"
+        case extraBold = "TheJamsilOTF6ExtraBold"
+        
+        func font(size: CGFloat) -> Font {
+            return Font.custom(rawValue, size: size)
+        }
+    }
+}
+~~~
+
+~~~swift
+extension Color {
+  init(hexCode: String) {
+    let scanner = Scanner(string: hexCode)
+    _ = scanner.scanString("#")
+    
+    var rgbColor: UInt64 = 0
+    scanner.scanHexInt64(&rgbColor)
+    
+    let rColor = Double((rgbColor >> 16) & 0xFF) / 255.0
+    let gColor = Double((rgbColor >>  8) & 0xFF) / 255.0
+    let bColor = Double((rgbColor >>  0) & 0xFF) / 255.0
+    self.init(red: rColor, green: gColor, blue: bColor)
+  }
+}
+
+extension Color {
+    static let defaultColor = Color(hexCode: "#28CBAE")
+    static let backgroundColor = Color(hexCode: "#B8E3D4")
+    static let background2Color = Color(hexCode: "#DBEDE7")
+    static let disableColor = Color(hexCode: "#B3B3B3")
+    static let buttonBackgroundColor = Color(hexCode: "F5F5F5")
+    static let beforeImagePickColor = Color(hexCode: "#C4C4C4")
+    static let beforeImagePickTextColor = Color(hexCode: "#1A8370")
+    static let fontColor = Color(hexCode: "#1A8370")
+    static let accentFontColor = Color(hexCode: "#106051")
+    static let calendarNumberBackground = Color(hexCode: "#E5F9F5")
+    static let watchCharacterBackground = Color(hexCode: "#62D8AD")
+}
+~~~
+
+
 ### 🌠 Trouble Shooting
 
-#### 1. 캐릭터와 함께 사진을 찍을수 있는 기능에서, 사진의 point와 view의 point위치가 달라 사진을 찍으면 
+#### 1. 캐릭터 선택에서 디자인, 개발 공수를 줄이기 위해 얼굴형과 표정을 분리하여 이미지를 합치는 식으로 구현하였음.
+~~~swift
+let faceArray: [String] = ["face_bag_", "face_can_", "face_dust_", "face_twin_", "face_centerbag_", "face_pet_", "face_jellyfish_", "face_plasticbag_"]
+let colorArray: [String] = ["gray", "green", "lightpurple", "mystic", "pink", "orange", "yellow"]
+let emotionArray: [String] = ["emotion_1", "emotion_2", "emotion_3", "emotion_4", "emotion_5", "emotion_6", "emotion_7", "emotion_8"]
+
+Image(uiImage: viewModel.imageMerger.merge("\(viewModel.faceArray[viewModel.characterFace] + viewModel.colorArray[viewModel.characterColor])", with: "\(viewModel.emotionArray[viewModel.characterEmotion])"))
+~~~
 
 ### 🗂️ 폴더 구조
 ~~~
