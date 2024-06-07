@@ -22,9 +22,9 @@
 
 - 캐릭터, 닉네임 설정
 - Gamekit을 이용한 방 생성, 참가
-- Mapkit을 이용한 지도, 폴리라인
-- 2D 케릭터와 같이 사진찍을 수 있는 기능
-- 사진으로 추출 기능
+- Mapkit을 이용한 지도, 폴리라인 생성 
+- 2D 케릭터와 사진찍는 기능
+- 플로깅 결과 사진으로 저장 기능
 
 
 
@@ -129,7 +129,7 @@ extension Color {
 
 ### 🌠 Trouble Shooting
 
-#### 1. 캐릭터 선택에서 디자인, 개발 공수를 줄이기 위해 얼굴형과 표정을 분리하여 이미지를 합치는 식으로 구현하였음.
+#### 1. 케릭터 선택에서 디자인 공수가 급격하게 늘어나는 이슈, 얼굴형, 색깔과 표정을 분리하고 이미지를 합쳐 새로운 이미지를 만드는 방식으로 구현하여 디자인 공수를 줄임
 ~~~swift
 let faceArray: [String] = ["face_bag_", "face_can_", "face_dust_", "face_twin_", "face_centerbag_", "face_pet_", "face_jellyfish_", "face_plasticbag_"]
 let colorArray: [String] = ["gray", "green", "lightpurple", "mystic", "pink", "orange", "yellow"]
